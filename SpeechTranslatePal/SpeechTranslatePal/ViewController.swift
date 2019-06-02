@@ -40,7 +40,7 @@ class ViewController: UIViewController {
     @IBAction func translate(_ sender: Any) {
         
         let translator = GoogleTranslate()
-        translator.apiKey = "AIzaSyBcCqUyTuUHQTU-cv2mLoicLDHD9_dW2RU"
+        translator.apiKey = "API_KEY"
         
         var params = GoogleTranslateParameters()
         params.source = lang
