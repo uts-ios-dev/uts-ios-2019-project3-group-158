@@ -29,7 +29,7 @@ public struct GoogleTranslateParameters {
 
 open class GoogleTranslate {
     
-    public var apiKey = "API_KEY"
+    public var apiKey = "AIzaSyBcCqUyTuUHQTU-cv2mLoicLDHD9_dW2RU"
     
     public init() {
         

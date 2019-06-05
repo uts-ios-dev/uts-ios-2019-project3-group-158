@@ -12,6 +12,7 @@
 		691B9DC722A28770009AC5A8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 691B9DC522A28770009AC5A8 /* Main.storyboard */; };
 		691B9DC922A28771009AC5A8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 691B9DC822A28771009AC5A8 /* Assets.xcassets */; };
 		691B9DCC22A28771009AC5A8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 691B9DCA22A28771009AC5A8 /* LaunchScreen.storyboard */; };
+		69260AFD22A2934300CD95C9 /* GoogleTranslate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69260AFC22A2934300CD95C9 /* GoogleTranslate.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +23,7 @@
 		691B9DC822A28771009AC5A8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		691B9DCB22A28771009AC5A8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		691B9DCD22A28771009AC5A8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		69260AFC22A2934300CD95C9 /* GoogleTranslate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoogleTranslate.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +58,7 @@
 			children = (
 				691B9DC122A28770009AC5A8 /* AppDelegate.swift */,
 				691B9DC322A28770009AC5A8 /* ViewController.swift */,
+				69260AFC22A2934300CD95C9 /* GoogleTranslate.swift */,
 				691B9DC522A28770009AC5A8 /* Main.storyboard */,
 				691B9DC822A28771009AC5A8 /* Assets.xcassets */,
 				691B9DCA22A28771009AC5A8 /* LaunchScreen.storyboard */,
@@ -135,6 +138,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				69260AFD22A2934300CD95C9 /* GoogleTranslate.swift in Sources */,
 				691B9DC422A28770009AC5A8 /* ViewController.swift in Sources */,
 				691B9DC222A28770009AC5A8 /* AppDelegate.swift in Sources */,
 			);
@@ -282,6 +286,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = SpeechTranslatePal/Info.plist;
@@ -291,6 +296,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = uts.ios.SpeechTranslatePal;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -300,6 +306,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = SpeechTranslatePal/Info.plist;
@@ -309,6 +316,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = uts.ios.SpeechTranslatePal;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
