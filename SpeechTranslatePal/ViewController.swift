@@ -20,6 +20,7 @@ class ViewController: UIViewController {
     var lang2: String = "en"
     
     @IBOutlet weak var startStopButton: UIButton!
+    @IBOutlet weak var imgAnimation: UIImageView!
     
     @IBAction func startStop(_ sender: Any) {
         
@@ -29,9 +30,11 @@ class ViewController: UIViewController {
             audioEngine.stop()
             recognitionRequest?.endAudio()
             startStopButton.isEnabled = false
+            imgAnimation.image = nil
             startStopButton.setTitle("Start Recording", for: .normal)
         } else {
             startRecording()
+            imgAnimation.image = UIImage.gifImageWithName("animatingmusic")
             startStopButton.setTitle("Stop Recording", for: .normal)
         }
         
