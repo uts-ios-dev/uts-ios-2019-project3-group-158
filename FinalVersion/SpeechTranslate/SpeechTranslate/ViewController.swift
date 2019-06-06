@@ -98,7 +98,7 @@ class ViewController: UIViewController, UIPopoverPresentationControllerDelegate 
             recognitionRequest?.endAudio()
         }
         let translator = GoogleTranslate()
-        translator.apiKey = "AIzaSyBcCqUyTuUHQTU-cv2mLoicLDHD9_dW2RU"
+        translator.apiKey = "API_KEY"
         
         var params = GoogleTranslateParameters()
         params.source = lang
