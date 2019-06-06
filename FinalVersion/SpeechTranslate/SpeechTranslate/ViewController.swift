@@ -171,14 +171,9 @@ class ViewController: UIViewController, UIPopoverPresentationControllerDelegate 
         textView.text = "I am Listening Now ... Say Something!"
     }
 
-//    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-//        if segue.identifier == "popoverSegue" {
-//            let popoverViewController = segue.destination
-//            popoverViewController.popoverPresentationController!.delegate = self
-//        }
-//    }
+
     var tempIndex:Int = 0;
-    var tempIndex1:Int = 0;
+    var tempSecondIndex:Int = 0;
     let image = UIImage(named: "de.png") as UIImage?
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "popoverSegue" {
@@ -187,7 +182,6 @@ class ViewController: UIViewController, UIPopoverPresentationControllerDelegate 
             if let vc = segue.destination as? LanguageTableViewController {
                 vc.tapHandler = { index in
                     self.tempIndex = index;
-                    print(self.tempIndex)
                     if(self.tempIndex == 0){
                         self.lang = "en"
                         self.firstLangugaeButton.setBackgroundImage(UIImage(named: "en.png"), for: .normal)
@@ -204,7 +198,6 @@ class ViewController: UIViewController, UIPopoverPresentationControllerDelegate 
                         self.lang = "it"
                         self.firstLangugaeButton.setBackgroundImage(UIImage(named: "it.png"), for: .normal)
                     }
-                    print(self.lang)
                 }
             }
             
@@ -213,25 +206,23 @@ class ViewController: UIViewController, UIPopoverPresentationControllerDelegate 
             popoverViewController.popoverPresentationController!.delegate = self
             if let vc = segue.destination as? LanguageTableViewController {
                 vc.tapHandler = { index in
-                    self.tempIndex1 = index;
-                    print(self.tempIndex1)
-                    if(self.tempIndex1 == 0){
+                    self.tempSecondIndex = index;
+                    if(self.tempSecondIndex == 0){
                         self.lang2 = "en"
                         self.secondLanguageButton.setBackgroundImage(UIImage(named: "en.png"), for: .normal)
-                    }else if(self.tempIndex1 == 1){
+                    }else if(self.tempSecondIndex == 1){
                         self.lang2 = "de"
                         self.secondLanguageButton.setBackgroundImage(UIImage(named: "de.png"), for: .normal)
-                    }else if(self.tempIndex1 == 2){
+                    }else if(self.tempSecondIndex == 2){
                         self.lang2 = "fr"
                         self.secondLanguageButton.setBackgroundImage(UIImage(named: "fr.png"), for: .normal)
-                    }else if(self.tempIndex1 == 3){
+                    }else if(self.tempSecondIndex == 3){
                         self.lang2 = "es"
                         self.secondLanguageButton.setBackgroundImage(UIImage(named: "es.png"), for: .normal)
-                    }else if(self.tempIndex1 == 4){
+                    }else if(self.tempSecondIndex == 4){
                         self.lang2 = "it"
                         self.secondLanguageButton.setBackgroundImage(UIImage(named: "it.png"), for: .normal)
                     }
-                    print(self.lang2)
                 }
             }
             
