@@ -11,7 +11,7 @@ import Speech
 import Foundation
 
 extension UIButton {
-    //MARK: StartBlink
+    //For start Pulsating
     func startPulsate() {
         let pulse = CASpringAnimation(keyPath: "transform.scale")
         pulse.duration = 0.6
@@ -24,7 +24,7 @@ extension UIButton {
         
         layer.add(pulse, forKey: nil)
     }
-    
+    //For start Blinking
     func startBlink() {
         UIView.animate(withDuration: 0.8,//Time duration
             delay:0.0,
@@ -33,7 +33,7 @@ extension UIButton {
             completion: nil)
     }
     
-    //MARK: StopBlink
+    //For StopBlinking
     func stopBlink() {
         layer.removeAllAnimations()
         alpha = 1
@@ -53,10 +53,11 @@ class ViewController: UIViewController, UIPopoverPresentationControllerDelegate 
     @IBOutlet weak var micButton: UIButton!
     @IBOutlet weak var firstLangugaeButton: UIButton!
     @IBOutlet weak var secondLanguageButton: UIButton!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         self.view.backgroundColor = UIColor(red: 1, green: 0.9882, blue: 0.9686, alpha: 1.0)
-        //startStopButton.isEnabled = false
+        self.micButton.isEnabled = false
         speechRecognizer?.delegate = self as? SFSpeechRecognizerDelegate
         speechRecognizer = SFSpeechRecognizer (locale: Locale.init(identifier: lang))
         SFSpeechRecognizer.requestAuthorization { (authStatus) in
@@ -83,13 +84,15 @@ class ViewController: UIViewController, UIPopoverPresentationControllerDelegate 
         }
         
     }
-
+    
+    // Record Button
     @IBAction func reordButtonTapped(_ sender: Any) {
         firstLangugaeButton.startBlink()
         speechRecognizer = SFSpeechRecognizer(locale: Locale.init(identifier: lang))
         startRecording()
     }
-
+    
+    // Translate Bytton
     @IBAction func translateButton(_ sender: UIButton) {
         sender.startPulsate()
         firstLangugaeButton.stopBlink()
